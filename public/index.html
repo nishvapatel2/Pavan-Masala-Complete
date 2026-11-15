@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pavan Masala | The Taste of Tradition</title>
+
+<meta name="description"
+content="Pavan Masala - Authentic spices rooted in Gujarat and made for every Indian kitchen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+    PROUDLY ROOTED IN GUJARAT • MADE FOR EVERY INDIAN KITCHEN
+</div>
+
+
+<!-- ========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+
+    <div class="logo-circle">
+        <img
+         src="images/logo.jpg"
+         alt="Pavan Masala logo">
+    </div>
+
+    <div>
+        <div class="logo-name">
+            Pavan
+        </div>
+
+        <span class="logo-sub">
+            MASALA
+        </span>
+    </div>
+
+</a>
+
+
+<button class="menu-btn" onclick="toggleMenu()">
+    ☰
+</button>
+
+
+<ul class="nav-links" id="navLinks">
+
+    <li>
+        <a href="#home">Home</a>
+    </li>
+
+    <li>
+        <a href="#products">Our Spices</a>
+    </li>
+
+    <li>
+        <a href="#story">Our Story</a>
+    </li>
+
+    <li>
+        <a href="#recipes">Recipes</a>
+    </li>
+
+    <li>
+        <a href="#contact">Contact</a>
+    </li>
+
+    <li>
+        <a href="#products" class="nav-shop">
+            Explore Products
+        </a>
+    </li>
+
+    <li>
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+<!-- ========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+    <div class="hero-label">
+        Authentic Indian Spices
+    </div>
+
+    <h1>
+        The Taste
+        <span>of Tradition.</span>
+    </h1>
+
+    <p class="hero-text">
+        From Gujarat's kitchens to homes across India,
+        Pavan Masala brings carefully crafted spices
+        that make everyday food taste extraordinary.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#products" class="btn btn-red">
+            Explore Our Spices →
+        </a>
+
+        <a href="#story" class="btn btn-outline">
+            Discover Our Story
+        </a>
+
+    </div>
+
+    <div class="hero-note">
+        ✦ TRADITION &nbsp; ✦ QUALITY &nbsp; ✦ FLAVOUR
+    </div>
+
+</div>
+
+
+<div class="hero-visual">
+
+    <div class="hero-image">
+
+        <img
+        src="images/Pavan Masala- Flavorful Heritage Banner.png"
+        alt="Indian food and spices">
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro">
+
+<div class="container intro-content">
+
+    <div class="section-label">
+        Welcome to Pavan
+    </div>
+
+    <h2>
+        Good Food Begins With The<br>
+        Magic Of Good Spices
+    </h2>
+
+    <div class="intro-line"></div>
+
+    <p>
+         Bring every meal to life with the rich aroma, authentic flavours,
+        and traditional taste of Pavan Masala. Inspired by the timeless
+        secrets of Indian kitchens, our spices add warmth, love, and a
+        delicious touch to every dish.We believe spices are more than ingredients.
+        They are the aroma of home, the colour of celebration
+        and the flavour behind memories.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     PRODUCTS
+========================================================= -->
+
+<section class="products" id="products">
+
+<div class="container">
+
+<div class="product-toolbar">
+
+<div class="section-heading">
+
+    <div class="section-label">
+        Our Collection
+    </div>
+
+    <h2>
+        Essential spices.<br>
+        Extraordinary flavour.
+    </h2>
+
+    <p>
+        Four everyday essentials for the Indian kitchen.
+    </p>
+
+</div>
+
+
+<div class="search-box">
+
+    <input
+    type="search"
+    id="productSearch"
+    placeholder="Search spices..."
+    aria-label="Search products"
+    oninput="searchProducts()">
+
+    <button 
+        type="button"
+    class="search-icon"
+    onclick="document.getElementById('productSearch').value=''; searchProducts();"
+    aria-label="Clear search">
+    🔍
+    </button>
+
+</div>
+
+</div>
+
+
+<div class="filter-buttons">
+
+<button class="filter-btn active"
+onclick="filterProducts('all',this)">
+    All
+</button>
+
+<button class="filter-btn"
+onclick="filterProducts('pure',this)">
+    Pure Spices
+</button>
+
+<button class="filter-btn"
+onclick="filterProducts('blend',this)">
+    Blended Masala
+</button>
+
+</div>
+
+
+<div class="product-grid" id="productGrid">
+
+
+<!-- RED CHILLI -->
+
+<div class="product-card"
+data-category="pure"
+data-name="red chilli powder">
+
+<div class="product-image">
+
+    <span class="product-badge">
+        PURE SPICE
+    </span>
+
+    <img
+    src="images/chilli.jpg"
+    alt="Red chilli powder">
+
+</div>
+
+<h3>
+    Red Chilli Powder
+</h3>
+
+<p>
+    Vibrant colour and balanced heat for
+    curries, sabzis, marinades and more.
+</p>
+
+<div class="product-bottom">
+
+    
+<div class="product-purchase">
+    <label for="weight-chilli">Package size:</label>
+
+<select id="weight-chilli"
+        class="package-select"
+        onchange="updateProductPrice('Red Chilli Powder', this.value)">
+    <option value="100 g">100 g</option>
+    <option value="200 g">200 g</option>
+    <option value="500 g">500 g</option>
+</select>
+
+    <span class="product-price" id="price-chilli">
+        ₹40
+    </span>
+</div>
+
+
+    <div class="product-actions">
+
+        <button
+        class="small-btn details-btn"
+        onclick="showProduct('Red Chilli Powder',document.getElementById('weight-chilli').value)">
+            Details
+        </button>
+
+        <button
+    class="small-btn"
+    onclick="addToCart('Red Chilli Powder', document.getElementById('weight-chilli').value)">
+    + Cart
+</button>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- TURMERIC -->
+
+<div class="product-card"
+data-category="pure"
+data-name="turmeric powder">
+
+<div class="product-image">
+
+    <span class="product-badge">
+        PURE SPICE
+    </span>
+
+    <img
+    src="images/turmeric.jpg"
+    alt="Turmeric powder">
+
+</div>
+
+<h3>
+    Turmeric Powder
+</h3>
+
+<p>
+    Golden colour and warm earthy flavour
+    for everyday Indian cooking.
+</p>
+
+<div class="product-bottom">
+
+    
+<div class="product-purchase">
+    <label for="weight-turmeric">Package size:</label>
+
+    <select id="weight-turmeric"
+        class="package-select"
+        onchange="updateProductPrice('Turmeric Powder', this.value)">
+    <option value="100 g">100 g</option>
+    <option value="200 g">200 g</option>
+    <option value="500 g">500 g</option>
+</select>
+
+    <span class="product-price" id="price-turmeric">
+        ₹35
+    </span>
+</div>
+
+
+    <div class="product-actions">
+
+        <button
+        class="small-btn details-btn"
+        onclick="showProduct('Turmeric Powder', document.getElementById('weight-turmeric').value)">
+            Details
+        </button>
+
+        <button
+    class="small-btn"
+    onclick="addToCart('Turmeric Powder', document.getElementById('weight-turmeric').value)">
+    + Cart
+</button>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- CORIANDER -->
+
+<div class="product-card"
+data-category="pure"
+data-name="coriander powder">
+
+<div class="product-image">
+
+    <span class="product-badge">
+        PURE SPICE
+    </span>
+
+    <img
+    src="images/daniya.jpg"
+    alt="Coriander spices">
+
+</div>
+
+<h3>
+    Coriander Powder
+</h3>
+
+<p>
+    Fresh aroma and balanced flavour
+    for curries, dals and sabzis.
+</p>
+
+<div class="product-bottom">
+
+    
+<div class="product-purchase">
+    <label for="weight-coriander">Package size:</label>
+
+    <select id="weight-coriander"
+        class="package-select"
+        onchange="updateProductPrice('Coriander Powder', this.value)">
+    <option value="100 g">100 g</option>
+    <option value="200 g">200 g</option>
+    <option value="500 g">500 g</option>
+</select>
+
+    <span class="product-price" id="price-coriander">
+        ₹30
+    </span>
+</div>
+
+
+    <div class="product-actions">
+
+        <button
+        class="small-btn details-btn"
+        onclick="showProduct('Coriander Powder', document.getElementById('weight-coriander').value)">
+            Details
+        </button>
+
+        <button
+    class="small-btn"
+    onclick="addToCart('Coriander Powder', document.getElementById('weight-coriander').value)">
+    + Cart
+</button>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- GARAM MASALA -->
+
+<div class="product-card"
+data-category="blend"
+data-name="garam masala">
+
+<div class="product-image">
+
+    <span class="product-badge">
+        SIGNATURE BLEND
+    </span>
+
+    <img
+    src="images/garam masala.jpg"
+    alt="Garam masala">
+
+</div>
+
+<h3>
+    Garam Masala
+</h3>
+
+<p>
+    Aromatic and rich, created to add
+    warmth and depth to Indian dishes.
+</p>
+
+<div class="product-bottom">
+
+    
+<div class="product-purchase">
+    <label for="weight-garam">Package size:</label>
+
+    <select id="weight-garam"
+        class="package-select"
+        onchange="updateProductPrice('Garam Masala', this.value)">
+    <option value="10 g">10 g</option>
+</select>
+
+    <span class="product-price" id="price-garam">
+        ₹10
+    </span>
+</div>
+
+
+    <div class="product-actions">
+
+        <button
+        class="small-btn details-btn"
+        onclick="showProduct('Garam Masala', document.getElementById('weight-garam').value)">
+            Details
+        </button>
+
+        <button
+    class="small-btn"
+    onclick="addToCart('Garam Masala', document.getElementById('weight-garam').value)">
+    + Cart
+</button>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     WHY PAVAN
+========================================================= -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <div class="section-label">
+        The Pavan Promise
+    </div>
+
+    <h2>
+        Why Pavan?
+    </h2>
+
+    <p>
+        A simple belief: when the ingredients are right,
+        every meal becomes special.
+    </p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+    <div class="why-icon">🌾</div>
+
+    <h3>
+        Carefully Selected
+    </h3>
+
+    <p>
+        We believe great flavour starts with
+        quality ingredients.
+    </p>
+
+</div>
+
+
+<div class="why-card">
+
+    <div class="why-icon">❤️</div>
+
+    <h3>
+        Made With Care
+    </h3>
+
+    <p>
+        Every blend is created with attention
+        to the flavour families love.
+    </p>
+
+</div>
+
+
+<div class="why-card">
+
+    <div class="why-icon">🍛</div>
+
+    <h3>
+        Everyday Flavour
+    </h3>
+
+    <p>
+        Spices made for simple meals,
+        celebrations and everything between.
+    </p>
+
+</div>
+
+
+<div class="why-card">
+
+    <div class="why-icon">🇮🇳</div>
+
+    <h3>
+        Made for India
+    </h3>
+
+    <p>
+        Born in Gujarat with a dream of
+        reaching kitchens across India.
+    </p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     STORY
+========================================================= -->
+
+<section class="story" id="story">
+
+<div class="container story-grid">
+
+<div class="story-image">
+
+    <img
+    src="images/story.jpg"
+    alt="Traditional Indian cooking">
+
+    <div class="story-badge">
+        ROOTED<br>
+        IN<br>
+        GUJARAT
+    </div>
+
+</div>
+
+
+<div class="story-content">
+
+    <div class="section-label">
+        <h1>
+        Our Story:A Journey of Tradition, Taste & Trust
+        </h1>
+    </div>
+
+    <h5>
+        Rooted in the vibrant traditions of Gujarat, Pavan Masala began its journey in 2023 from the
+        small town of Biloda. Since then, we have expanded our reach to many towns, sharing the 
+        authentic taste and aroma of Indian spices. We believe spices are more than just ingredients
+        they are the heart of cherished recipes, family traditions, and unforgettable memories.
+         Our mission is to make every dish more flavourful and every meal more special. With a dream 
+         of reaching every home across Gujarat and, one day, all of India, we continue our journey 
+         with passion and pride.
+    </h5>
+
+    <p>
+        At Pavan Masala, we believe that every great meal begins with the perfect blend of spices. 
+        Inspired by the rich culinary heritage of India, our story celebrates the flavours, aromas,
+         and traditions that bring families together around the dining table.
+    </p>
+
+    <p>
+        From the vibrant colour of turmeric to the rich aroma of freshly ground spices, every spice 
+        tells a story of culture, warmth, and homemade goodness. Our aim is to bring these authentic
+        flavours into every kitchen, helping you  
+    </p>
+
+    <a href="#contact" class="btn btn-red">
+        Connect With Pavan →
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     NUMBERS
+========================================================= -->
+
+<section class="numbers">
+
+<div class="container numbers-grid">
+
+<div>
+
+    <div class="number" data-target="4">
+        0
+    </div>
+
+    <div class="number-label">
+        ESSENTIAL PRODUCTS
+    </div>
+
+</div>
+
+
+<div>
+
+    <div class="number" data-target="1">
+        0
+    </div>
+
+    <div class="number-label">
+        ROOTED IN GUJARAT
+    </div>
+
+</div>
+
+
+<div>
+
+    <div class="number" data-target="1">
+        0
+    </div>
+
+    <div class="number-label">
+        BIG DREAM — ALL INDIA
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     GUJARAT
+========================================================= -->
+
+<section class="gujarat">
+
+<div class="container gujarat-grid">
+
+<div class="gujarat-image">
+
+    <img
+    src="images/Gujarat.jpg"
+    alt="Indian food">
+
+</div>
+
+
+<div>
+
+    <div class="section-label">
+        Our Roots
+    </div>
+
+    <h2>
+        Rooted<br>
+        in Gujarat.
+    </h2>
+
+    <p>
+        Gujarat has a special relationship with food.
+        From everyday family meals to festive thalis,
+        flavour is part of the culture.
+    </p>
+
+    <p>
+        Pavan carries that spirit forward while building
+        a modern spice brand for today's generation.
+    </p>
+
+    <a href="#story" class="btn"
+    style="background:#f0bd3b;color:#65170f;">
+        Discover Our Story →
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     INDIA VISION
+========================================================= -->
+
+<section class="vision">
+
+<div class="container vision-content">
+
+    <div class="section-label">
+        Our Dream
+    </div>
+
+    <h2>
+        From Gujarat<br>
+        to every Indian kitchen.
+    </h2>
+
+    <p>
+        Today, Pavan is focused on Gujarat.
+        Tomorrow, we dream of bringing our spices
+        to families across India.
+    </p>
+
+    <div class="india">
+
+        <div class="india-shape"></div>
+
+        <div class="india-dot"></div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     RECIPES
+========================================================= -->
+
+<section class="recipes" id="recipes">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <div class="section-label">
+        Pavan Kitchen
+    </div>
+
+    <h2>
+        What are you<br>
+        cooking today?
+    </h2>
+
+    <p>
+        Recipe inspiration for everyday meals,
+        family favourites and festive occasions.
+    </p>
+
+</div>
+
+
+<div class="recipe-filters">
+
+<button class="recipe-filter active"
+onclick="filterRecipes('all',this)">
+    All
+</button>
+
+<button class="recipe-filter"
+onclick="filterRecipes('gujarati',this)">
+    Gujarati
+</button>
+
+<button class="recipe-filter"
+onclick="filterRecipes('indian',this)">
+    Indian
+</button>
+
+</div>
+
+
+<div class="recipe-grid" id="recipeGrid">
+
+
+<div class="recipe-card"
+data-recipe="gujarati">
+
+<div class="recipe-image">
+
+    <img
+    src="images/sev.jpg"
+    alt="Sev Tamata">
+
+</div>
+
+<div class="recipe-info">
+
+    <span class="recipe-tag">
+        Gujarati Favourite
+    </span>
+
+    <h3>
+        Sev Tameta
+    </h3>
+
+    <p>
+        A comforting Gujarati classic
+        with sweet, spicy and tangy notes.
+    </p>
+
+</div>
+
+</div>
+
+
+<div class="recipe-card"
+data-recipe="indian">
+
+<div class="recipe-image">
+
+    <img
+    src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=85"
+    alt="Paneer masala">
+
+</div>
+
+<div class="recipe-info">
+
+    <span class="recipe-tag">
+        Family Favourite
+    </span>
+
+    <h3>
+        Paneer Masala
+    </h3>
+
+    <p>
+        Rich, creamy and aromatic,
+        perfect for a special family meal.
+    </p>
+
+</div>
+
+</div>
+
+
+<div class="recipe-card"
+data-recipe="indian">
+
+<div class="recipe-image">
+
+    <img
+    src="images/biryani.jpg"
+    alt="Biryani">
+
+</div>
+
+<div class="recipe-info">
+
+    <span class="recipe-tag">
+        Celebration Favourite
+    </span>
+
+    <h3>
+        Biryani
+    </h3>
+
+    <p>
+        Fragrant rice and aromatic spices
+        for celebrations and gatherings.
+    </p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     TESTIMONIAL
+========================================================= -->
+
+<section class="testimonial">
+
+<div class="container testimonial-inner">
+
+    <div class="quote-symbol">
+        “
+    </div>
+
+    <blockquote>
+        Great food isn't just about the recipe.
+        It's about the flavour you remember.
+    </blockquote>
+
+    <small>
+        THE PAVAN MASALA PHILOSOPHY
+    </small>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     STORE LOCATOR
+========================================================= -->
+
+<section class="store" id="contact">
+
+<div class="container store-box">
+
+<div>
+
+    <h2>
+        Find Pavan<br>
+        near you.
+    </h2>
+
+    <p>
+        Select your city to find Pavan products near you.
+    </p>
+
+</div>
+
+
+<div class="store-form">
+
+<select id="city">
+
+    <option value="">
+        Select your city
+    </option>
+
+    <option>
+        Ahmedabad
+    </option>
+
+    <option>
+        Gandhinagar
+    </option>
+
+    <option>
+        Surat
+    </option>
+
+    <option>
+        Vadodara
+    </option>
+
+    <option>
+        Rajkot
+    </option>
+
+</select>
+
+<button onclick="findStore()">
+    FIND STORE
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     FAQ
+========================================================= -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <div class="section-label">
+        Questions
+    </div>
+
+    <h2>
+        Frequently asked questions.
+    </h2>
+
+</div>
+
+
+<div class="faq-grid">
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+
+    Where is Pavan Masala based?
+
+    <span class="faq-plus">
+        +
+    </span>
+
+</button>
+
+<div class="faq-answer">
+
+    Pavan Masala is rooted in Gujarat and currently
+    focuses on serving customers in Gujarat.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+
+    Which products does Pavan currently offer?
+
+    <span class="faq-plus">
+        +
+    </span>
+
+</button>
+
+<div class="faq-answer">
+
+    Our current core range includes Red Chilli Powder,
+    Turmeric Powder, Coriander Powder and Garam Masala.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+
+    Can I order Pavan products online?
+
+    <span class="faq-plus">
+        +
+    </span>
+
+</button>
+
+<div class="faq-answer">
+
+    This website currently demonstrates the ordering
+    experience. Online ordering can be connected to
+    a real backend and order-management system later.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+
+    Will Pavan be available outside Gujarat?
+
+    <span class="faq-plus">
+        +
+    </span>
+
+</button>
+
+<div class="faq-answer">
+
+    Expanding across India is part of Pavan Masala's
+    long-term vision.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="final">
+
+<div class="container">
+
+    <h2>
+        Make every<br>
+        meal memorable.
+    </h2>
+
+    <p>
+        Bring the warmth of Indian spices into your kitchen
+        with Pavan Masala.
+    </p>
+
+    <a href="#products"
+    class="btn"
+    style="background:#f1bd3b;color:#66170f;">
+        EXPLORE OUR SPICES →
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+    <div class="footer-logo">
+        Pavan Masala
+    </div>
+
+    <p>
+        Parampara ka swaad,
+        har rasoi ke naam.
+    </p>
+
+    <div class="socials">
+
+        <a href="#" class="social">
+            f
+        </a>
+
+        <a href="#" class="social">
+            ◎
+        </a>
+
+        <a href="#" class="social">
+            ▶
+        </a>
+
+    </div>
+
+</div>
+
+
+<div>
+
+    <div class="footer-title">
+        Explore
+    </div>
+
+    <ul class="footer-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#products">Products</a>
+        </li>
+
+        <li>
+            <a href="#recipes">Recipes</a>
+        </li>
+
+        <li>
+            <a href="#story">Our Story</a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<div>
+
+    <div class="footer-title">
+        Help
+    </div>
+
+    <ul class="footer-links">
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+            <a href="#">FAQs</a>
+        </li>
+
+        <li>
+            <a href="#">Shipping</a>
+        </li>
+
+        <li>
+            <a href="#">Privacy Policy</a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<div>
+
+    <div class="footer-title">
+        Stay Connected
+    </div>
+
+    <p style="font-size:10px;color:#9f9289;">
+        Get Pavan recipes and updates.
+    </p>
+
+    <div class="newsletter">
+
+        <input
+        type="email"
+        id="email"
+        placeholder="Your email">
+
+        <button onclick="subscribe()">
+            →
+        </button>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+    <span>
+        © 2026 Pavan Masala. All Rights Reserved.
+    </span>
+
+    <span>
+        Made with ❤️ in Gujarat
+    </span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ========================================================
+     PRODUCT MODAL
+========================================================= -->
+
+<div class="modal-overlay" id="productModal">
+
+<div class="modal">
+
+<button class="modal-close"
+onclick="closeModal()">
+    ×
+</button>
+
+<div class="modal-image">
+
+    <img
+    id="modalImage"
+    src=""
+    alt="Pavan product">
+
+</div>
+
+<div class="modal-content">
+
+    <div class="section-label">
+        Pavan Masala
+    </div>
+
+    <h2 id="modalTitle">
+        Product
+    </h2>
+
+    <p id="modalDescription">
+        Product description.
+    </p>
+
+  <div class="product-purchase">
+
+    <label for="modalPackageSize">
+        Choose package size:
+    </label>
+
+    <select
+        id="modalPackageSize"
+        class="package-select"
+        onchange="updateModalProductPrice()">
+    </select>
+
+    <p class="product-price">
+        Price: <span id="modalProductPrice">₹0</span>
+    </p>
+
+</div>
+
+    <p style="font-size:10px;">
+        *Update these sizes according to your actual
+        Pavan Masala packaging.
+    </p>
+
+    <button
+    class="btn btn-red"
+    onclick="addModalProduct()">
+        Add to Cart
+    </button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ========================================================
+     CART
+========================================================= -->
+
+<div class="cart-panel" id="cartPanel">
+
+<div class="cart-header">
+
+    <h2>
+        Your Cart
+    </h2>
+
+    <button class="cart-close"
+    onclick="closeCart()">
+        ×
+    </button>
+
+</div>
+
+
+<div class="cart-items" id="cartItems">
+
+    <div class="empty-cart">
+        Your cart is empty.
+    </div>
+
+</div>
+
+
+<div class="cart-footer">
+
+    <div class="cart-total">
+
+        <span>
+            Items
+        </span>
+
+        <span id="cartTotal">
+            0
+        </span>
+
+    </div>
+
+    <button
+    class="checkout-btn"
+    onclick="openOrderForm()">
+
+        PLACE ORDER REQUEST
+
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- ========================================================
+     ORDER MODAL
+========================================================= -->
+
+<div class="modal-overlay" id="orderModal">
+
+<div class="modal-content"
+style="width:min(550px,100%);background:#fffdf7;border-radius:25px;position:relative;">
+
+<button class="modal-close"
+onclick="closeOrderForm()">
+    ×
+</button>
+
+<div class="section-label">
+    Order Request
+</div>
+
+<h2>
+    Tell us where to send it.
+</h2>
+
+<p>
+    Submit your order request and Pavan can contact
+    you to confirm availability and delivery details.
+</p>
+
+<form class="order-form"
+onsubmit="submitOrder(event)">
+
+<input
+type="text"
+id="customerName"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Mobile Number"
+required>
+
+<input
+type="text"
+id="customerCity"
+placeholder="City"
+required>
+
+<textarea
+id="customerAddress"
+placeholder="Delivery Address"
+required></textarea>
+
+<button class="order-submit">
+    SEND ORDER REQUEST
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- ========================================================
+     TOAST
+========================================================= -->
+
+<div class="toast" id="toast">
+    Added to cart.
+</div>
+
+
+<!-- ========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

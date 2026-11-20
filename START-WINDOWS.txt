@@ -1,8 +1,1 @@
-1. Install Node.js LTS from https://nodejs.org/
-2. Open this folder in VS Code.
-3. In the VS Code terminal run: npm install
-4. Run: Copy-Item .env.example .env
-5. Edit .env and set a private ADMIN_KEY.
-6. Run: npm start
-7. Visit http://127.0.0.1:3000 and http://127.0.0.1:3000/admin.html
-Keep the terminal open while using the website.
+
